@@ -1,0 +1,79 @@
+/*ESTILO A TABLA FICHA ADMIN*/
+#tablalistordenproc {
+  font-family:'Arial Narrow',sans-serif;
+  border-collapse: collapse;
+  width: 1430px;
+}
+
+#tablalistordenproc td, #tablalistordenproc th {
+  border: 1px solid #ddd;
+  padding: 1px;
+  text-align: center;
+   border: 1px solid #000;
+   border-spacing: 0;
+   font-size: 16px;
+
+}
+
+
+#tablalistordenproc tr:hover {background-color: #ddd;}
+
+#tablalistordenproc th {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #82C244;
+  color: white;
+}
+/*AJUSTA CONTENIDO A DIMENSIONES DE TABLA*/
+.responsive
+{
+  overflow-x:auto;
+}
+/*ESTILO A ICONOS DE TABLA*/
+i{
+ color: #1A5895;
+
+}
+
+/*ESTILO CABECERA TABLA LISTA DE ORDENES (VISTA PROCURADOR)*/
+#formato td, {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #82C244;
+  color: white;
+}
+ #fila1{
+    background: #82C244;
+   color:white;
+  }
+  #fila2{
+    background: #B1EF07;
+  }
+
+
+  /*ESTILO A TABLA lista de ordenes procurador maestro*/
+#tablalistordenprocmaster {
+  font-family:'Arial Narrow',sans-serif;
+  border-collapse: collapse;
+  width: 1380px;
+}
+
+#tablalistordenprocmaster td, #tablalistordenprocmaster th {
+  border: 1px solid #ddd;
+  padding: 1px;
+  text-align: center;
+   border: 1px solid #000;
+   border-spacing: 0;
+   font-size: 16px;
+
+}
+
+
+#tablalistordenprocmaster tr:hover {background-color: #ddd;}
+
+#tablalistordenprocmaster th {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #82C244;
+  color: white;
+}

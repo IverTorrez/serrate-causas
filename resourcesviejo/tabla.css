@@ -1,0 +1,35 @@
+/*ESTILO A TABLA*/
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+   border: 1px solid #000;
+   border-spacing: 0;
+}
+
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #82C244;
+  color: white;
+}
+/*AJUSTA CONTENIDO A DIMENSIONES DE TABLA*/
+.responsive
+{
+  overflow-x:auto;
+}
+/*ESTILO A ICONOS DE TABLA*/
+i{
+ color: #1A5895; 
+}
+
+

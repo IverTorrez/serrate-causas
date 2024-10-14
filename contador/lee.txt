@@ -1,0 +1,21 @@
+esto vas a pegar en el formularios.css
+al final de todos los estilos
+/*DIV EN DOS COLUMNAS */
+#contenedor{
+text-align: left;
+width: 80%;
+margin: auto;}
+
+#lateral{
+width: 45%;
+float:left; 
+}
+
+#principal{
+margin-left:60%;
+
+
+}
+en la carpeta contador presupuestar  hay un text area para poner el wordsito
+no lo puse xq no lo tenia y xq ya lo tienes, 
+lo vas a poner eso  no mas.

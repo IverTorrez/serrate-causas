@@ -1,0 +1,75 @@
+/*ESTILO A TABLA FICHA ADMIN*/
+#tablamatriz {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#tablamatriz td, #tablamatriz th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+   border: 1px solid #000;
+   border-spacing: 0;
+   font-size: 16px;
+
+}
+
+
+#tablamatriz tr:hover {background-color: #ddd;}
+
+#tablamatriz th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #82C244;
+  color: white;
+}
+/*AJUSTA CONTENIDO A DIMENSIONES DE TABLA*/
+.responsive
+{
+  overflow-x:auto;
+}
+/*ESTILO A ICONOS DE TABLA*/
+i{
+ color: #1A5895;
+
+}
+
+/*ESTILO CABECERA TABLA LISTA DE ORDENES (VISTA PROCURADOR)*/
+#formato td, {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #82C244;
+  color: white;
+}
+ #fila1{
+    background: #82C244;
+   color:white;
+  }
+  #fila2{
+    background: #B1EF07;
+  }
+/*ESTILOS PARA EL BOTON GUARDAR*/
+  input[type=submit]{
+  width: 20%;
+  background-color: #1A5895;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 500px; 
+  margin-top: 20px;
+
+}
+
+/*ESTILOS PARA las cajas de textos number*/
+  input[type=number]{
+  width: 70px;
+  
+}
+
+input[type=submit]:hover {
+  background-color: #81D4E9;
+}

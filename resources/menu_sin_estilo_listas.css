@@ -1,0 +1,294 @@
+/*--General--*/
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,
+a, img, /*ol, ul, li,*/
+fieldset, form, label {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+body {
+    line-height: 1;
+}
+/*ol, ul {
+    list-style: none;
+}*/
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container, #latest_works, #bottom_content, #download {
+    margin: auto;
+    width: 1200px;
+}
+
+.bold_text {
+    font-weight: bold;
+}
+
+.blue_text {
+    color: #2aacc8;
+    font-size: 15px;
+}
+
+/* ----- Header Styling ----- */
+#header {
+ 
+    height: 130px;/* ----- Header Styling  Se cambio, era 120----- */
+}
+
+.logo {
+    float: left;
+    margin-top: 20px;
+}
+
+.logo {
+    display: block;
+    height: 76px;
+    text-indent: -9999px;
+    width: 400px;
+}
+/* ----- Main Navigation Styling ----- */
+#main_menu {
+    float: right;
+    margin-top: 10px;/* ----- Es el margen entre el logo y los enlaces de encabezado----- */
+}
+/*ESTILO PARA EL ENCABEZADO DE PAGINAS DEL ADM*/
+#main_menu_admin {
+    float: left;
+    margin-top: 10px;/* ----- Es el margen entre el logo y los enlaces de encabezado----- */
+}
+.first_listleftadm {
+    float: right;
+    margin: 0 14px;
+   
+}
+
+/*ESTILO PARA EL CODIGO DE LAS CAUSAS EN EL ENCABEZADO DE LAS PAGINAS*/
+#codcausas{
+    font-size: 30px; color: #bdb76b;
+
+
+    font-weight: bold;
+    height: 19px;
+    margin-bottom: 10px;
+    padding: 6px 0 0 40px;
+    text-align: right;
+    position: relative;
+    top: 20px;
+}
+
+
+.first_list {
+    float: left;
+    margin: 0 14px;
+}
+
+.first_listleft {
+    float: right;
+    margin: 0 14px;
+    margin-right: 270px;
+}
+
+
+.main_menu_first {
+    color: #000;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 8px 8px;
+    text-transform: uppercase;
+}
+
+.main_menu_first:hover {
+    border-top: 5px solid #82C244;
+}
+
+
+.first_list:hover.first_list ul {
+    visibility: visible;
+}
+
+
+.main_current {
+    border-top: 5px solid #82C244;
+}
+
+/* ----- Portfolio Content Styling ----- */
+
+#portfolio_area {
+    border-top: 1px solid #d9d9d9;
+    padding-top: 10px;
+}
+
+#portfolio {
+    font-size: 15px;
+    font-weight: bold;
+    height: 19px;
+    margin-bottom: 10px;
+    padding: 6px 0 0 40px;
+    text-align: right;
+    position: relative;
+    top: 20px;
+}
+
+#portfolio_menu {
+    border-bottom: 1px solid #dfe1e5;
+   /* border-top: 1px solid #dfe1e5;*/
+    margin-bottom: 25px;
+    
+}
+
+#portfolio_menu #ul-portsfolio {
+    padding: 20px 0;
+}
+
+#portfolio_menu #li-porta, #portfolio_list li {
+    float: left;
+}
+
+#portfolio_menu #li-porta {
+    margin-right: 2px;
+}
+
+#portfolio_menu a {
+    color: #000;
+    font-size: 14px;
+    padding: 7px 18px;
+}
+
+#portfolio_menu button:hover {
+    background: #82C244;
+    color: #ffffff;
+}
+
+
+
+/*-- BUTTON MENU Styling--*/
+ .botones{
+        font-size:11px;
+        font-family:Verdana,Helvetica;
+        font-weight:bold;
+        color:#000000;
+        background:#FFFFFF;
+       
+        width:140px;
+        height:35px;
+        border-color: #000000;
+       }
+/*-- BUTTON MENU FICHA--*/
+ #btnfichas{
+    font-size:11px;
+        font-family:Verdana,Helvetica;
+        font-weight:bold;
+        margin-left: 250px;
+        width:140px;
+        height:35px;
+        color:#000000;
+        background:#FFFFFF;
+        border-color: #000000;
+       }
+ #btnfichas:hover {
+    background: #82C244;
+    color: #FFFFFF;
+}
+
+/*BOTON ACTIVADO DE MENU*/
+.activado
+{
+    background:#B1EF07;
+}
+
+/*ESTILO DE LOS CONTADORES DE ORDENES EN CADA PASO, EN CADA BOTON DE SEGUIMIENTO ()*/
+#contadores{
+background: red; 
+font-size: 12px; 
+color: white; 
+width: 20px; 
+height: 20px; 
+-moz-border-radius:50%; 
+-webkit-border-radius: 50%; 
+border-radius: 50%;
+}
+
+/*ESTILO DE LOS CONTADORES DE ORDENES VENCIDAS LEVES Y GRAVES*/
+#contadoresvencidos{
+background: #1A5895; 
+font-size: 12px; 
+color: white; 
+width: 20px; 
+height: 20px; 
+-moz-border-radius:50%; 
+-webkit-border-radius: 50%; 
+border-radius: 50%;
+}
+/*ESTILO PARA EL BOTON QUE MUESTRA LA INFORMACION DE LA JUSTIFICACION DEL RECHAZO DE UNA ORDEN*/
+.btninforechazo{
+margin-left: 1120px; background: red; 
+font-size: 12px; 
+color: white; 
+width: 50px; 
+height: 30px; 
+-moz-border-radius:50%; 
+-webkit-border-radius: 50%; 
+border-radius: 50%;
+cursor: pointer; 
+}
+
+
+/*ESTILI PARA LAS OL UL LI DEL ENCABEZADO DE CADA PAGINA*/
+/*#main_menu_admin ol,#ul-menu, #li-menu
+{
+  margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    /*list-style: none;*/
+/*}*/
+
+#main_menu ol,#ul-menu, #li-menu
+{
+  margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    /*list-style: none;*/
+}
+
+#portfolio_menu ol,#ul-portsfolio, #li-porta
+{
+ margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+   /* list-style: none;*/
+}
+
+/*#main_menu_admin ol,#ul-menu
+{
+  
+    list-style: none;
+}*/
+#main_menu ol,#ul-menu
+{
+  
+    list-style: none;
+}
+#portfolio_menu ol,#ul-portsfolio
+{
+ 
+    list-style: none;
+}
+/*hasta aqui se modifico las  OL, UL  Y LI*/

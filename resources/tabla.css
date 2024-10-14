@@ -1,0 +1,418 @@
+/*ESTILO A TABLA*/
+#customers {
+  font-family:'Arial Narrow',sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 1px;
+  text-align: center;
+   border: 1px solid #000;
+   border-spacing: 0;
+   font-size: 16px;
+
+}
+
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #82C244;
+  color: white;
+}
+
+
+/*ESTILO PARA TABLA TRIBUNAL EN AGREGAR EXPEDIENTE DIGITAL*/
+#tribunalexp {
+  font-family:'Arial Narrow',sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+#tribunalexp td, #tribunalexp th {
+  border: 1px solid #ddd;
+  padding: 1px;
+  text-align: center;
+   border: 1px solid #000;
+   border-spacing: 0;
+   font-size: 16px;
+
+}
+
+
+#tribunalexp tr:hover {background-color: #ddd;}
+
+#tribunalexp th {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #82C244;
+  color: white;
+}
+
+/*AJUSTA CONTENIDO A DIMENSIONES DE TABLA*/
+.responsive
+{
+  overflow-x:auto;
+}
+/*ESTILO A ICONOS DE TABLA*/
+i{
+ color: #1A5895; 
+}
+
+/*ESTILO CABECERA TABLA LISTA DE ORDENES (VISTA PROCURADOR)*/
+#formato td, {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #82C244;
+  color: white;
+}
+/*ESTILO PARA EL TAMAÑO DE LETRAS DE LOS SELECTORES DE FILTRO POR ABOGADO, CLIENTE, ECT*/
+#selectcausas{
+   font-size: 12px;
+   font-family:'Arial Narrow',sans-serif;
+}
+/*ESTILO PARA PONER LOS TEXTOS DE LAS TABLAS DE PROSA A LA IZQUIERDA */
+
+#filaprosa td{
+    text-align: left;
+  }
+/*ESTILO PARA PONER EL TAMAÑO DE LOS SUBTITULOS PEQUEÑOS DE LOS ENCABEZADOS EJP. (POR DEFECTO) */
+#psubt{
+  font-size: 12px;
+}
+/*ESTILO PARA LA TABLA DE CAUSAS ACTIVAS DEL ADMINISTRADOR */
+
+#tablacausasactivas{
+  font-family:'Arial Narrow',sans-serif;
+  border-collapse: collapse;
+  width: 1740px;
+}
+#tablacausasactivas td, #tablacausasactivas th {
+  border: 1px solid #ddd;
+  padding: 1px;
+  text-align: center;
+   border: 1px solid #000;
+   border-spacing: 0;
+   font-size: 16px;
+
+
+}
+
+
+#tablacausasactivas tr:hover {background-color: #ddd;}
+
+#tablacausasactivas th {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #82C244;
+  color: white;
+}
+
+
+/*ESTILO PARA LA TABLA RESUMEN FINAL (LISTA DE ORDENES administrador) */
+
+#tablaresumenfinal {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 30%;
+
+}
+
+#tablaresumenfinal td, #tablaresumenfinal th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+   border: 1px solid #000;
+   border-spacing: 0;
+
+
+}
+
+
+#tablaresumenfinal tr:hover {background-color: #ddd;}
+
+#tablaresumenfinal th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #82C244;
+  color: white;
+}
+#monto1{
+   font-size: 20px;
+   
+}
+#monto2{
+  font-size: 30px;
+
+}
+
+/*ESTILO PARA PONER LOS NUMEROS DE DINERO A LA DERECHA , LA TABLA ORDEN DEL ADMINISTRADOR */
+
+#filadinero td{
+  text-align: right;
+}
+/*ESTILO PARA LA TABLA USUARIOS  */
+
+
+#tablausuarios {
+  font-family:'Arial Narrow',sans-serif;
+  border-collapse: collapse;
+  width: 1800px;
+}
+
+#tablausuarios td, #tablausuarios th {
+  border: 1px solid #ddd;
+  padding: 1px;
+  text-align: center;
+   border: 1px solid #000;
+   border-spacing: 0;
+   font-size: 16px;
+
+}
+
+
+#tablausuarios tr:hover {background-color: #ddd;}
+
+#tablausuarios th {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #82C244;
+  color: white;
+}
+/*AJUSTA CONTENIDO A DIMENSIONES DE TABLA*/
+.responsive
+{
+  overflow-x:auto;
+}
+/*ESTILO A ICONOS DE TABLA*/
+i{
+ color: #1A5895; 
+}
+
+
+/*ESTILO PARA LA TABLA DE COLOCAR COSTO JUDICIAL*/
+#tablacolocarcostoj {
+  font-family:'Arial Narrow',sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#tablacolocarcostoj td, #tablacolocarcostoj th {
+  border: 1px solid #ddd;
+  padding: 0px;
+  text-align: center;
+   border: 1px solid #000;
+   border-spacing: 0;
+   font-size: 16px;
+
+}
+
+
+#tablacolocarcostoj tr:hover {background-color: #ddd;}
+
+#tablacolocarcostoj th {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #82C244;
+  color: white;
+}
+
+/*ESTILO PARA TABLA DEVOLVER MUCHOS, CONTADOR*/
+#tabladevolvermuchos {
+  font-family:'Arial Narrow',sans-serif;
+  border-collapse: collapse;
+  width: 1185px;
+}
+
+#tabladevolvermuchos td, #tabladevolvermuchos th {
+  border: 1px solid #ddd;
+  padding: 1px;
+  text-align: center;
+   border: 1px solid #000;
+   border-spacing: 0;
+   font-size: 8px;
+
+}
+
+
+#tabladevolvermuchos tr:hover {background-color: #ddd;}
+
+#tabladevolvermuchos th {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #82C244;
+  color: white;
+}
+
+
+/*ESTILO PARA LA TABLA CAUSAS ACTIVAS DEL ABOGADO*/
+#tablacausaabogado {
+  font-family:'Arial Narrow',sans-serif;
+  border-collapse: collapse;
+  width: 1230px;
+}
+
+#tablacausaabogado td, #tablacausaabogado th {
+  border: 1px solid #ddd;
+  padding: 1px;
+  text-align: center;
+   border: 1px solid #000;
+   border-spacing: 0;
+   font-size: 16px;
+
+}
+
+
+#tablacausaabogado tr:hover {background-color: #ddd;}
+
+#tablacausaabogado th {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #82C244;
+  color: white;
+}
+
+/*ESTILO PARA LA TABLA CAUSAS ACTIVAS DEL CONTADOR*/
+#tablacausacontador {
+  font-family:'Arial Narrow',sans-serif;
+  border-collapse: collapse;
+  width: 1290px;
+}
+
+#tablacausacontador td, #tablacausacontador th {
+  border: 1px solid #ddd;
+  padding: 1px;
+  text-align: center;
+   border: 1px solid #000;
+   border-spacing: 0;
+   font-size: 16px;
+
+}
+
+
+#tablacausacontador tr:hover {background-color: #ddd;}
+
+#tablacausacontador th {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #82C244;
+  color: white;
+}
+
+
+/*ESTILO PARA LA TABLA CAUSAS ACTIVAS DEL PROCURADOR MAESTRO*/
+#tablacausaPmaestro {
+  font-family:'Arial Narrow',sans-serif;
+  border-collapse: collapse;
+  width: 1380px;
+}
+
+#tablacausaPmaestro td, #tablacausaPmaestro th {
+  border: 1px solid #ddd;
+  padding: 1px;
+  text-align: center;
+   border: 1px solid #000;
+   border-spacing: 0;
+   font-size: 16px;
+
+}
+
+
+#tablacausaPmaestro tr:hover {background-color: #ddd;}
+
+#tablacausaPmaestro th {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #82C244;
+  color: white;
+}
+
+
+
+
+/*ESTILO PARA LA TABLA LISTA DE ORDENES DEL CONTADOR (LISTA PARA LA ENTREGA DE DINERO) */
+
+#tablalistaordenentrega{
+   font-family:'Arial Narrow',sans-serif;
+  border-collapse: collapse;
+  width: 1300px;
+}
+#tablalistaordenentrega td, #tablalistaordenentrega th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+   border: 1px solid #000;
+   border-spacing: 0;
+   font-size: 16px;
+
+}
+
+
+#tablalistaordenentrega tr:hover {background-color: #ddd;}
+
+#tablalistaordenentrega th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #82C244;
+  color: white;
+}
+
+
+/*ESTILO A TABLA PISO*/
+#tablapiso {
+   font-family:'Arial Narrow',sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+#tablapiso td, #tablapiso th {
+  border: 1px solid #ddd;
+  padding: 1px;
+  text-align: center;
+   border: 1px solid #000;
+   border-spacing: 0;
+   font-size: 16px;
+
+}
+
+
+#tablapiso tr:hover {background-color: #ddd;}
+
+#tablapiso th {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #82C244;
+  color: white;
+}
+
+/*ESTILO A TABLA CUERPOS DE EXPEDIENTE*/
+#tablacuerpoexp {
+   font-family:'Arial Narrow',sans-serif;
+  border-collapse: collapse;
+  width: 30%;
+}
+
+#tablacuerpoexp td, #tablacuerpoexp th {
+  border: 1px solid #ddd;
+  padding: 1px;
+  text-align: center;
+   border: 1px solid #000;
+   border-spacing: 0;
+   font-size: 16px;
+
+}
+
+
+#tablacuerpoexp tr:hover {background-color: #ddd;}
+
+#tablacuerpoexp th {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #82C244;
+  color: white;
+}
+

@@ -1,0 +1,406 @@
+
+CREATE TABLE usuario(
+id_usuario int PRIMARY KEY AUTO_INCREMENT,
+nombreusuario varchar(50),
+apellidosusuario varchar(50),
+nombrelogusu varchar(20),
+telefonousu varchar(20),
+correousuario varchar(50),
+claveusu varchar(20),
+direccion varchar(50),
+coordenadas text,
+observaciones varchar(100),
+estadousu varchar(20),
+fotousu text,
+tipousuario varchar(20),
+visibleusu varchar(10)
+);
+
+CREATE TABLE cajasdesalida(
+id_cajasalida int PRIMARY KEY AUTO_INCREMENT,
+cajacontador DECIMAL(30,2),
+deudaexterna DECIMAL(30,2),
+gananciasprocesalyproc DECIMAL(30,2),
+imagenindex text
+);
+
+CREATE TABLE abogado(
+id_abogado int PRIMARY KEY AUTO_INCREMENT,
+nombreabog varchar(50),
+apellidoabog varchar(50),
+nombrelogabog varchar(20),
+telefonoabog varchar(20),
+correoabog varchar(50),
+claveabog varchar(20),
+direccionabog varchar(50),
+coordenadasabog text,
+observacionesabog varchar(100),
+estadoabog varchar(20),
+fotoabog text,
+visibleusuab varchar(10)
+);
+
+CREATE TABLE cliente(
+id_cliente int PRIMARY KEY AUTO_INCREMENT,
+nombrecli varchar(50),
+apellidocli varchar(50),
+nombrelogcli varchar(20),
+telefonocli varchar(20),
+correocli varchar(50),
+clavecli varchar(20),
+direccioncli varchar(50),
+coordenadascli text,
+observacionescli varchar(100),
+estadocli varchar(20),
+fotocli text,
+visiblecli varchar(10)
+);
+CREATE TABLE procurador(
+id_procurador int PRIMARY KEY AUTO_INCREMENT,
+nombreproc varchar(50),
+apellidoproc varchar(50),
+nombrelogproc varchar(20),
+telefonoproc varchar(20),
+correoproc varchar(50),
+claveproc varchar(20),
+direccionproc varchar(50),
+coordenadasproc text,
+observacionesproc varchar(100),
+estadoproc varchar(20),
+fotoproc text,
+tipoproc varchar(20),
+visibleproc varchar(10)
+);
+
+CREATE TABLE contador(
+id_contador int PRIMARY KEY AUTO_INCREMENT,
+nombrecont varchar(50),
+apellidocont varchar(50),
+nombrelogcont varchar(20),
+telefonocont varchar(20),
+correocont varchar(50),
+clavecont varchar(20),
+direccioncont varchar(50),
+coordenadascont text,
+observacionescont varchar(100),
+estadocont varchar(20),
+fotocont text,
+visiblecont varchar(10)
+);
+
+CREATE TABLE distrito(
+id_distrito int PRIMARY KEY AUTO_INCREMENT,
+nombredistrito varchar(70),
+abreviaturadist varchar(10),
+estado varchar(10)
+);
+CREATE TABLE piso(
+id_piso int PRIMARY KEY AUTO_INCREMENT,
+nombrepiso varchar(50),
+estado varchar(10)
+);
+
+CREATE TABLE tipolegal(
+id_tipolegal int PRIMARY KEY AUTO_INCREMENT,
+nombretipolegal varchar(50),
+abreviaturalegal varchar(20),
+estado varchar(10),
+id_materia int
+);
+CREATE TABLE materia(
+id_materia int PRIMARY KEY AUTO_INCREMENT,
+nombremateria varchar(40),
+abreviaturamat varchar(10),
+estado varchar(10)
+);
+CREATE TABLE prioridad(
+id_prioridad int PRIMARY KEY AUTO_INCREMENT,
+nombreprioridad varchar(10),
+preciocompra int,
+precioventa int,
+penalizacion int,
+condicion int
+);
+CREATE TABLE categoria(
+id_categoria int PRIMARY KEY AUTO_INCREMENT,
+nombrecat varchar(30),
+abreviaturacat varchar(10),
+estado varchar(10)
+);
+CREATE TABLE juzgados(
+id_juzgados int PRIMARY KEY AUTO_INCREMENT,
+nombrenumerico int,
+jerarquia varchar(20),
+materiajuz varchar(20),
+coordenadasjuz text,
+fotojuz text,
+id_distrito int,
+id_piso int,
+contacto1 text,
+contacto2 text,
+contacto3 text,
+contacto4 text,
+estado varchar(10),
+FOREIGN KEY(id_distrito) REFERENCES distrito(id_distrito),
+FOREIGN KEY(id_piso) REFERENCES piso(id_piso)
+);
+
+CREATE TABLE causa(
+id_causa int PRIMARY KEY AUTO_INCREMENT,
+obsevacionescausas text,
+objetivos text,
+estrategias text,
+informacion text,
+estadocausa varchar(20),
+nombrecausa text,
+caja DECIMAL(30,2),
+id_cliente int,
+id_abogado int,
+id_tipolegal int,
+id_procurador int,
+id_materia int,
+id_categoria int,
+id_usuario int,
+saldodevuelto DECIMAL(30,2),
+apuntesjuridicos text,
+apunteshonorarios text,
+observsolotexto text,
+objetivossolotexto text,
+estrategiassolotexto text,
+inforsolotexto text,
+apuntesjuridicossolotexto text,
+apunteshonorariosolotexto text,
+FOREIGN KEY(id_cliente) REFERENCES cliente(id_cliente),
+FOREIGN KEY(id_abogado) REFERENCES abogado(id_abogado),
+FOREIGN KEY(id_tipolegal) REFERENCES tipolegal(id_tipolegal),
+FOREIGN KEY(id_procurador) REFERENCES procurador(id_procurador),
+FOREIGN KEY(id_materia) REFERENCES materia(id_materia),
+FOREIGN KEY(id_categoria) REFERENCES categoria(id_categoria),
+FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario)
+);
+CREATE TABLE clase_tribunal(
+id_clasetribunal int PRIMARY KEY AUTO_INCREMENT,
+nombreclasetrib varchar(30),
+estado varchar(10)
+);
+
+CREATE TABLE tribunal(
+id_tribunal int PRIMARY KEY AUTO_INCREMENT,
+expediente varchar(20),
+codnurejianuj varchar(30),
+linkcarpeta text,
+id_clasetribunal int,
+id_causa int,
+id_juzgados int,
+FOREIGN KEY(id_causa) REFERENCES causa(id_causa),
+FOREIGN KEY(id_juzgados) REFERENCES juzgados(id_juzgados),
+FOREIGN KEY(id_clasetribunal) REFERENCES clase_tribunal(id_clasetribunal)
+);
+
+CREATE TABLE cuerpo_expediente(
+id_cuerpo int PRIMARY KEY AUTO_INCREMENT,
+linkcuerpo text,
+nombrecuerpo varchar(50),
+id_tribunal int,
+FOREIGN KEY(id_tribunal) REFERENCES tribunal(id_tribunal)
+);
+
+CREATE TABLE denandante_demandado(
+id_deman int PRIMARY KEY AUTO_INCREMENT,
+nombresdeman varchar(50),
+tipodeman varchar(20),
+id_causa int,
+foja varchar(20),
+ultimodomicilio text,
+estadodem varchar(20),
+ultimodomiciliosolotexto text,
+FOREIGN KEY(id_causa) REFERENCES causa(id_causa)
+);
+
+CREATE TABLE deposito(
+id_deposito int PRIMARY KEY AUTO_INCREMENT,
+fecha_deposito varchar(20),
+detalle_deposito varchar(100),
+monto_deposito DECIMAL(30,2),
+id_causa int,
+tipodeposito varchar(50),
+idorigendeposito int,
+FOREIGN KEY(id_causa) REFERENCES causa(id_causa)
+);
+
+CREATE TABLE pagoprocurador(
+id_pago int PRIMARY KEY AUTO_INCREMENT,
+fechapago varchar(30),
+pagoproc int,
+fechainiconsul varchar(20),
+fechafinconsul varchar(20),
+id_procurador int,
+FOREIGN KEY(id_procurador) REFERENCES procurador(id_procurador)
+);
+
+CREATE TABLE ordengeneral(
+id_orden int PRIMARY KEY AUTO_INCREMENT,
+informacion text,
+documentacion text,
+fecha_inicio_orden varchar(30),
+fecha_fin_orden varchar(30),
+hora_inicio varchar(10),
+hora_fin varchar(10),
+fecha_giro varchar(20),
+plazo_hora varchar(10),
+fecha_recepcion varchar(20),
+estado_orden varchar(20),
+calificacion_todo varchar(20),
+prioridad int,
+fecha_cierre varchar(20),
+id_causa int,
+id_procurador int,
+id_prioridad int,
+tipoorden varchar(20),
+visible varchar(20),
+infosolotexto text,
+docsolotexto text,
+fecha_inibandera varchar(30),
+
+FOREIGN KEY(id_causa) REFERENCES causa(id_causa),
+FOREIGN KEY(id_procurador) REFERENCES procurador(id_procurador),
+FOREIGN KEY(id_prioridad) REFERENCES prioridad(id_prioridad)  
+);
+
+CREATE TABLE presupuesto(
+id_presupuesto int PRIMARY KEY AUTO_INCREMENT,
+monto_presupuesto DECIMAL(30,2),
+detalle_presupuesto text,
+fecha_presupuesto varchar(20),
+fecha_entrega varchar(20),
+id_orden int,
+id_contador int,
+estadopresupuesto varchar(20),
+detallepresusolotexto text,
+FOREIGN KEY(id_orden) REFERENCES ordengeneral(id_orden),
+FOREIGN KEY(id_contador) REFERENCES contador(id_contador)
+);
+
+CREATE TABLE cotizacion(
+id_cotizacion int PRIMARY KEY AUTO_INCREMENT,
+compra int,
+venta int,
+penalizacion int,
+id_orden int,
+prioridadcot int,
+condicioncot int,
+FOREIGN KEY(id_orden) REFERENCES ordengeneral(id_orden)
+);
+
+CREATE TABLE descargaprocurador(
+id_descarga int PRIMARY KEY AUTO_INCREMENT,
+detalle_informacion text,
+ultima_foja varchar(20),
+documentaciondescarga text,
+gastos DECIMAL(30,2),
+saldo DECIMAL(30,2),
+detalle_gasto text,
+fecha_descarga varchar(20),
+comprajudicial DECIMAL(30,2),
+id_orden int,
+validado varchar(20),
+descargainfosolotexto text,
+descargadocusolotexto text,
+descargadetallegastosolotexto text,
+FOREIGN KEY(id_orden) REFERENCES ordengeneral(id_orden)
+);
+
+CREATE TABLE confirmacion(
+id_confirmacion int PRIMARY KEY AUTO_INCREMENT,
+confir_sistema int,
+confir_abogado int,
+fecha_confir_abogado varchar(20),
+confir_contador int,
+fecha_confir_contador varchar(20),
+id_descarga int,
+justificacionrechazo text,
+FOREIGN KEY(id_descarga) REFERENCES descargaprocurador(id_descarga)
+);
+
+CREATE TABLE costofinal(
+id_costofinal int PRIMARY KEY AUTO_INCREMENT,
+costo_procuradoria_compra int,
+costo_procuradoria_venta int,
+costo_procesal_venta DECIMAL(30,2),
+total_egreso DECIMAL(30,2),
+id_orden int,
+penalidadcostofinal int,
+malgasto DECIMAL(30,2),
+validadofinal varchar(20),
+canceladoprocurador varchar(20),
+ganaciaprocuradoria int,
+ganaciaprocesal DECIMAL(30,2),
+costo_procesal_compra DECIMAL(30,2),
+FOREIGN KEY(id_orden) REFERENCES ordengeneral(id_orden)
+);
+
+CREATE TABLE devoluciondinero(
+    id_devolucion int PRIMARY KEY AUTO_INCREMENT,
+    montodevolucion DECIMAL(30,2),
+    fechadevolucion varchar(20),
+    id_causa int,
+    FOREIGN KEY(id_causa) REFERENCES causa(id_causa)
+);
+
+CREATE TABLE plantilla(
+id_plantilla int PRIMARY KEY AUTO_INCREMENT,
+nombreplantilla text,
+estado varchar(10)
+);
+
+CREATE TABLE posta(
+id_posta int PRIMARY KEY AUTO_INCREMENT,
+numeroposta int,
+nombreposta text,
+id_plantilla int,
+estado varchar(20),
+FOREIGN KEY(id_plantilla)REFERENCES plantilla(id_plantilla)
+);
+
+CREATE TABLE postacausa(
+id_postacausa int PRIMARY KEY AUTO_INCREMENT,
+numeropostacausa int,
+nombrepostacausa text,
+estado varchar(20),
+id_causa int,
+copianombreplantilla text,
+FOREIGN KEY(id_causa) REFERENCES causa(id_causa)
+);
+
+CREATE TABLE tipoposta(
+id_tipoposta int PRIMARY KEY AUTO_INCREMENT,
+nombretipoposta varchar(80),
+estado varchar(20)
+);
+
+CREATE TABLE informeposta(
+id_informeposta int PRIMARY KEY AUTO_INCREMENT,
+fojainforme varchar(20),
+fechainforme varchar(20),
+calculogasto DECIMAL(30,2),
+informehonorario text,
+estado varchar(20),
+id_postacausa int,
+id_tipoposta int,
+fojainformetrunca varchar(20),
+fechainformetrunca varchar(20),
+informehonorariotrunca varchar(20),
+FOREIGN KEY(id_postacausa) REFERENCES postacausa(id_postacausa),
+FOREIGN KEY(id_tipoposta) REFERENCES tipoposta(id_tipoposta)
+);
+
+CREATE TABLE autoorden(
+id_autoorden int PRIMARY KEY AUTO_INCREMENT,
+detalleautoorden text,
+fechaini varchar(20),
+fechafin varchar(20),
+color varchar(20),
+estadoauto varchar(20),
+id_causa int,
+FOREIGN KEY(id_causa) REFERENCES causa(id_causa)
+);

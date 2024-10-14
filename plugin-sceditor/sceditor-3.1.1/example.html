@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+		<title>SCEditor Demo</title>
+
+		<link rel="stylesheet" href="minified/themes/default.min.css" id="theme-style" />
+		  
+		<script src="minified/sceditor.min.js"></script>
+		<script src="minified/icons/monocons.js"></script>
+		<script src="minified/formats/bbcode.js"></script>
+
+
+		
+
+ <script type="text/javascript" src="jquery.js"></script>
+
+		<style>
+			html {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 13px;
+			}
+			form div {
+				padding: .5em;
+			}
+			code:before {
+				position: absolute;
+				content: 'Code:';
+				top: -1.35em;
+				left: 0;
+			}
+			code {
+				margin-top: 1.5em;
+				position: relative;
+				background: #eee;
+				border: 1px solid #aaa;
+				white-space: pre;
+				padding: .25em;
+				min-height: 1.25em;
+			}
+			code:before, code {
+				display: block;
+				text-align: left;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="" method="post" id="form">
+			<div>
+				<textarea id="example" class="textaaa" style="height:300px;width:100%;"></textarea>
+
+			</div>
+
+			<div>
+				<label for="theme">Theme:</label>
+				<select id="theme">
+					<option value="default">Default</option>
+					<option value="defaultdark">Default dark</option>
+					<option value="modern">Modern</option>
+					<option value="office-toolbar">Office Toolbar</option>
+					<option value="office">Office</option>
+					<option value="square">Square</option>
+				</select>
+			</div>
+		</form>
+
+
+		<script>
+			var textarea = document.getElementById('example');
+			sceditor.create(textarea, {
+				format: 'bbcode',
+				icons: 'monocons',
+				style: 'minified/themes/content/default.min.css'
+			});
+
+
+			var themeInput = document.getElementById('theme');
+			themeInput.onchange = function() {
+				var theme = 'minified/themes/' + themeInput.value + '.min.css';
+
+				document.getElementById('theme-style').href = theme;
+			};
+		</script>
+
+		<p>SCEditor is licensed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT</a></p>
+	</body>
+	<div id="divnuevo">
+	<input type="text" name="" id="idtext">
+
+	<button id="btnclik" onclick="funcionclick()">presionar</button>
+	</div>
+</html>
+
+<script type="text/javascript">
+	function funcionclick()
+	{
+		
+		//let infosolotexto = textaaa.get('example').contentDocument.activeElement.innerText;
+	//var datos=document.getElementById("example");
+	//var datos=$("#example").html();
+
+		//alert(datos);
+
+		//var text = document.getElementById("example").value;
+       // alert(text);
+
+      var val=  sceditor.instance(example).val(false);
+        //  val=  val.replace('[', '<');
+       // var corchete='[';
+       // var remp=/\\/ig;
+       val= val.replace(/[[]/ig, '<');
+    
+    var   valHtml=val.replace(/]/ig, '>');
+    
+    /*quitamos etiquetas html*/
+   // var solotexto=valHtml.replace( /(<([^>]+)>)/ig, '');
+   //var html = "<p>A Computer Science "
+    //         + "Portal for Geeks</p>";
+    var div = document.createElement("div");
+    div.innerHTML = valHtml;
+    var text = div.textContent || div.innerText || "";
+
+   var textinfo= valHtml.replace( /(<([^>]+)>)/ig, '');
+    alert(valHtml);
+
+
+	}
+
+
+	//$(document).ready(function(){
+	///	$("#btnclik").click(function(){
+	//	    alert($("#example").html());
+	//	});
+	//});
+
+
+	
+</script>

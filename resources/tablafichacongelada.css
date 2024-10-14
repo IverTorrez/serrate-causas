@@ -1,0 +1,44 @@
+/*ESTILO A TABLA FICHA ADMIN*/
+#tablafichacongelada {
+  font-family:'Arial Narrow',sans-serif;
+  border-collapse: collapse;
+  width: 2860px;
+}
+
+#tablafichacongelada td, #tablafichacongelada th {
+  border: 1px solid #ddd;
+  padding: 1px;
+  text-align: center;
+   border: 1px solid #000;
+   border-spacing: 0;
+   font-size: 16px;
+
+}
+
+
+#tablafichacongelada tr:hover {background-color: #ddd;}
+
+#tablafichacongelada th {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #82C244;
+  color: white;
+}
+/*AJUSTA CONTENIDO A DIMENSIONES DE TABLA*/
+.responsive
+{
+  overflow-x:auto;
+}
+/*ESTILO A ICONOS DE TABLA*/
+i{
+ color: #1A5895;
+
+}
+
+/*ESTILO CABECERA TABLA LISTA DE ORDENES (VISTA PROCURADOR)*/
+#formato td, {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #82C244;
+  color: white;
+}
