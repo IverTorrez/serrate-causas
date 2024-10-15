@@ -23,7 +23,7 @@ $no=0;
         	echo 0;
             //echo "<script > setTimeout(function(){  }, 2000); swal('ERROR','No Selecciono Casillas','warning'); </script>";
         }
-    }
+    
    
 	
 
